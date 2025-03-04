@@ -212,6 +212,15 @@ impl<F> FeatureStore<F> {
         feature
     }
 
+    pub fn remove_all(&mut self) -> Vec<F> {
+        let mut features = vec![];
+        for i in 0..self.features.len() {
+            features.push(self.features.remove(i).feature);
+        }
+
+        features
+    }
+
     pub(super) fn get_entry(&self, index: usize) -> Option<&FeatureEntry<F>> {
         self.features.get(index)
     }
