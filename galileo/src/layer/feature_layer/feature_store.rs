@@ -191,7 +191,7 @@ impl<F> FeatureStore<F> {
         })
     }
 
-    /// Removes the feature with the given returning the feature.
+    /// Removes the feature with the given index returning the feature.
     ///
     /// # Panics
     ///
@@ -212,6 +212,7 @@ impl<F> FeatureStore<F> {
         feature
     }
 
+    /// Removes all features returning the features.
     pub fn remove_all(&mut self) -> Vec<F> {
         let mut features = vec![];
         for i in 0..self.features.len() {
