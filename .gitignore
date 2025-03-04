@@ -2,7 +2,6 @@ target
 .idea
 .tile_cache
 galileo/pkg
-Cargo.lock
 
 # Ignore large sample files
 **/*.laz
@@ -14,3 +13,4 @@ Cargo.lock
 
 # ctags
 tags
+.direnv

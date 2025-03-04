@@ -1,23 +1,25 @@
 [workspace]
 members = [
-    "galileo",
-    "galileo-mvt",
-    "galileo-types",
-    "galileo/examples/with_egui",
+  "galileo",
+  "galileo-mvt",
+  "galileo-types",
+  "galileo/examples/with_egui",
+  "workspace-hack",
 ]
 resolver = "2"
 
 exclude = [
-    "wasm_examples/raster_tiles",
-    "wasm_examples/vector_tiles",
-    "wasm_examples/feature_layers",
-    "wasm_examples/many_points",
-    "wasm_examples/lambert",
-    "wasm_examples/with_egui",
-    "android_examples/raster_tiles/rust",
+  "wasm_examples/raster_tiles",
+  "wasm_examples/vector_tiles",
+  "wasm_examples/feature_layers",
+  "wasm_examples/many_points",
+  "wasm_examples/lambert",
+  "wasm_examples/with_egui",
+  "android_examples/raster_tiles/rust",
 ]
 
 [workspace.package]
+name = "galileo"
 authors = ["Maxim Gritsenko <maxim@gritsenko.biz>"]
 categories = ["science::geo"]
 edition = "2021"
