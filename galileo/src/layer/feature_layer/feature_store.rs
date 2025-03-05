@@ -215,8 +215,8 @@ impl<F> FeatureStore<F> {
     /// Removes all features returning the features.
     pub fn remove_all(&mut self) -> Vec<F> {
         let mut features = vec![];
-        for i in 0..self.features.len() {
-            features.push(self.features.remove(i).feature);
+        while !features.is_empty() {
+            features.push(self.features.remove(0).feature);
         }
 
         features
