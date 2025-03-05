@@ -1,5 +1,7 @@
 use std::sync::{Arc, Mutex};
 
+use log::info;
+
 /// Feature storage of a [FeatureLayer](super::FeatureLayer).
 ///
 /// All access operations in the storage return [FeatureContainer] or [FeatureContainerMut] structs. These containers
@@ -215,8 +217,8 @@ impl<F> FeatureStore<F> {
     /// Removes all features returning the features.
     pub fn remove_all(&mut self) -> Vec<F> {
         let mut features = vec![];
-        while !features.is_empty() {
-            features.push(self.features.remove(0).feature);
+        while !self.features.is_empty() {
+            features.push(self.remove(0));
         }
 
         features
